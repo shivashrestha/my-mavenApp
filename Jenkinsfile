@@ -4,18 +4,18 @@ pipeline {
         skipStagesAfterUnstable()
     }
     stages {
-        stage('Clean') { 
+        stage('---Clean---') { 
             steps { 
                 bat ' mvn clean' 
             }
         }
-        stage('Test'){
+        stage('---Test---'){
             steps {
                 bat 'mvn test'
                  
             }
         }
-        stage('Package') {
+        stage('---Package--') {
             steps {
                 bat 'mvn package'
             }
